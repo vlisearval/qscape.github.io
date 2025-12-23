@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qscape</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">К</div>
+                <div class="logo-text">Кускейп</div>
+            </a>
+            <div class="nav-links">
+                <a href="#services">Услуги</a>
+                <a href="#process">Процесс</a>
+                <a href="#about">О нас</a>
+                <a href="#cases">Кейсы</a>
+            </div>
+            
+            <button class="cta-button nav-cta" onclick="openModal()">Обсудить проект</button>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    <div class="banners-container">
+        <div class="container">
+            <!-- Баннер 728x90 -->
+            <div class="banner-wrapper banner-728">
+                <div class="banner-728x90" id="banner728">
+                    <div class="banner-content">
+                        <div class="banner-left">
+                            <div class="banner-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="banner-text">
+                                <h3 class="banner-title">Ускорьте ваш digital-продукт</h3>
+                                <p class="banner-subtitle">Разработка под ключ за 3 месяца с гарантией результата</p>
+                            </div>
+                        </div>
+                        <div class="banner-right">
+                            <button class="banner-cta" onclick="openModal()">
+                                Бесплатная консультация
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                            <button class="banner-close" onclick="closeBanner('728')">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="banner-progress">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Баннер 468x60 -->
+            <div class="banner-wrapper banner-468">
+                <div class="banner-468x60" id="banner468">
+                    <div class="banner-content">
+                        <div class="banner-badge">
+                            <span class="badge-text">AI</span>
+                        </div>
+                        <div class="banner-text">
+                            <span class="banner-message">Внедряем AI в ваш бизнес. Первый месяц -50%</span>
+                        </div>
+                        <button class="banner-cta-small" onclick="openModal()">
+                            Узнать
+                        </button>
+                        <button class="banner-close-small" onclick="closeBanner('468')">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-title-line">Строим</span>
+                    <span class="hero-title-line">цифровые</span>
+                    <span class="hero-title-line accent">ландшафты</span>
+                </h1>
+                <p class="hero-subtitle">Qscape: Beyond the View. Мы проектируем и развиваем сложные IT-системы, которые становятся основой для роста вашего бизнеса.</p>
+                <div class="hero-buttons">
+                    <button class="cta-button primary" onclick="openModal()">
+                        Начать проект
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <a href="#cases" class="cta-button secondary">
+                        Смотреть кейсы
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Наша экспертиза</h2>
+                <p class="section-subtitle">Мы предлагаем полный цикл создания цифровых продуктов</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-service="strategy">
+                    <div class="service-icon">
+                        <i class="fas fa-chess-board"></i>
+                    </div>
+                    <h3 class="service-title">Цифровая стратегия</h3>
+                    <p class="service-description">Анализ бизнес-процессов, проектирование архитектуры решений, дорожные карты внедрения.</p>
+                    <div class="service-tech">
+                        <span>Analytics</span>
+                        <span>Research</span>
+                        <span>Strategy</span>
+                    </div>
+                </div>
+                
+                <div class="service-card" data-service="development">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="service-title">Разработка систем</h3>
+                    <p class="service-description">Fullstack-разработка, микросервисная архитектура, интеграции, AI/ML решения.</p>
+                    <div class="service-tech">
+                        <span>Node.js</span>
+                        <span>Python</span>
+                        <span>React</span>
+                        <span>AI</span>
+                    </div>
+                </div>
+                
+                <div class="service-card" data-service="design">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="service-title">Дизайн продуктов</h3>
+                    <p class="service-description">UX/UI дизайн сложных интерфейсов, дизайн-системы, прототипирование и тестирование.</p>
+                    <div class="service-tech">
+                        <span>Figma</span>
+                        <span>UX Research</span>
+                        <span>Prototyping</span>
+                    </div>
+                </div>
+                
+                <div class="service-card" data-service="evolution">
+                    <div class="service-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="service-title">Поддержка и эволюция</h3>
+                    <p class="service-description">Техническая поддержка, мониторинг, доработки и масштабирование работающих систем.</p>
+                    <div class="service-tech">
+                        <span>DevOps</span>
+                        <span>Support</span>
+                        <span>Scaling</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cases" id="cases">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Кейсы</h2>
+                <p class="section-subtitle">Реальные проекты, которые изменили бизнес наших клиентов</p>
+            </div>
+            
+<div class="cases-grid">
+    <a href="case-study.html" class="case-card">
+        <div class="case-image">
+            <img src="images/Mask group.png" alt="AI платформа анализа данных">
+            <div class="case-badge">AI Platform</div>
+            <div class="image-overlay"></div>
+        </div>
+        <div class="case-content">
+            <h3 class="case-title">Платформа анализа данных для ритейла</h3>
+            <p class="case-description">Система прогнозной аналитики для федеральной сети магазинов</p>
+            <div class="case-results">
+                <div class="case-result">
+                    <span class="result-value">+34%</span>
+                    <span class="result-label">к эффективности</span>
+                </div>
+                <div class="case-result">
+                    <span class="result-value">6 мес.</span>
+                    <span class="result-label">реализация</span>
+                </div>
+            </div>
+        </div>
+    </a>
+    
+    <a href="#" class="case-card">
+        <div class="case-image">
+            <img src="images/Mask group (1).png" alt="Мобильное банковское приложение">
+            <div class="case-badge">FinTech</div>
+            <div class="image-overlay"></div>
+        </div>
+        <div class="case-content">
+            <h3 class="case-title">Мобильный банк для нового поколения</h3>
+            <p class="case-description">Разработка и запуск FinTech-продукта с нуля</p>
+            <div class="case-results">
+                <div class="case-result">
+                    <span class="result-value">100K+</span>
+                    <span class="result-label">пользователей</span>
+                </div>
+                <div class="case-result">
+                    <span class="result-value">9 мес.</span>
+                    <span class="result-label">на рынок</span>
+                </div>
+            </div>
+        </div>
+    </a>
+    
+    <a href="#" class="case-card">
+        <div class="case-image">
+            <img src="images/Mask group (2).png" alt="ERP система управления">
+            <div class="case-badge">Enterprise</div>
+            <div class="image-overlay"></div>
+        </div>
+        <div class="case-content">
+            <h3 class="case-title">Цифровизация производственного холдинга</h3>
+            <p class="case-description">Комплексная ERP-система с IoT-интеграциями</p>
+            <div class="case-results">
+                <div class="case-result">
+                    <span class="result-value">-40%</span>
+                    <span class="result-label">операционных затрат</span>
+                </div>
+                <div class="case-result">
+                    <span class="result-value">1 год</span>
+                    <span class="result-label">внедрение</span>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+            
+            <div class="section-footer">
+                <a href="case-study.html" class="text-link">
+                    Смотреть все кейсы
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Наш процесс</h2>
+                <p class="section-subtitle">Четкая методология от идеи до запуска</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">Дискавери</h3>
+                    <p class="step-description">Глубокий анализ бизнес-задачи и проектирование архитектуры решения</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">Дизайн</h3>
+                    <p class="step-description">Создание пользовательских интерфейсов и прототипирование</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">Разработка</h3>
+                    <p class="step-description">Agile-разработка с регулярными демо и обратной связью</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h3 class="step-title">Запуск</h3>
+                    <p class="step-description">Деплой, тестирование и техническая поддержка</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Готовы изменить цифровой ландшафт вашего бизнеса?</h2>
+                <p class="cta-text">Обсудим ваш проект в течение 24 часов</p>
+                <button class="cta-button primary large" onclick="openModal()">
+                    Обсудить проект
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <footer class="footer" id="about">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">Q</div>
+                        <div class="logo-text">Qscape</div>
+                    </a>
+                    <p class="footer-tagline">Архитекторы цифровых ландшафтов</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-column-title">Компания</h4>
+                        <a href="#about">О нас</a>
+                        <a href="#process">Процесс</a>
+                        <a href="#team">Команда</a>
+                        <a href="#careers">Карьера</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-column-title">Услуги</h4>
+                        <a href="#services">Веб-разработка</a>
+                        <a href="#services">Дизайн</a>
+                        <a href="#services">Продвижение</a>
+                        <a href="#services">Битрикс24</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-column-title">Контакты</h4>
+                        <a href="mailto:hello@qscape.ru">info@qscape.ru</a>
+                        <a href="tel:+78001234567">+7 (920) 067-84-67</a>
+                        <a href="#">603155, Нижегородская область, г. Нижний Новгород, ул. Ковалихинская, д. 72Б</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 Qscape. Все права защищены.</p>
+                <div class="footer-legal">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Условия использования</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="projectModal">
+            <button class="modal-close" onclick="closeModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content">
+                <h3 class="modal-title">Обсудить проект</h3>
+                <p class="modal-subtitle">Заполните форму, и наш менеджер свяжется с вами в течение 24 часов</p>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Телефон">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Опишите ваш проект или задачу" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="cta-button primary full-width">
+                        Отправить заявку
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/banners.js"></script>
+</body>
+</html>

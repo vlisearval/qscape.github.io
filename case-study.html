@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кейс Qscape</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/case-study.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">Q</div>
+                <div class="logo-text">Qscape</div>
+            </a>
+            
+            <div class="nav-links">
+                <a href="index.html#services">Услуги</a>
+                <a href="index.html#process">Процесс</a>
+                <a href="index.html#about">О нас</a>
+                <a href="index.html" class="nav-case">На главную</a>
+            </div>
+            
+            <button class="cta-button nav-cta" onclick="openModal()">Обсудить проект</button>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    <div class="banners-container">
+        <div class="container">
+            <div class="banner-wrapper banner-728">
+                <div class="banner-728x90" id="banner728">
+                    <div class="banner-content">
+                        <div class="banner-left">
+                            <div class="banner-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="banner-text">
+                                <h3 class="banner-title">Аналитика для бизнеса</h3>
+                                <p class="banner-subtitle">Создаем системы аналитики как в этом кейсе</p>
+                            </div>
+                        </div>
+                        <div class="banner-right">
+                            <button class="banner-cta" onclick="openModal()">
+                                Заказать проект
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                            <button class="banner-close" onclick="closeBanner('728')">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="banner-progress">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="banner-wrapper banner-468">
+                <div class="banner-468x60" id="banner468">
+                    <div class="banner-content">
+                        <div class="banner-badge">
+                            <span class="badge-text">Case</span>
+                        </div>
+                        <div class="banner-text">
+                            <span class="banner-message">Похожий проект? Обсудим!</span>
+                        </div>
+                        <button class="banner-cta-small" onclick="openModal()">
+                            Обсудить
+                        </button>
+                        <button class="banner-close-small" onclick="closeBanner('468')">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="case-header">
+        <div class="container">
+            <div class="case-header-content">
+                <div class="case-breadcrumbs">
+                    <a href="index.html">Главная</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="index.html#cases">Кейсы</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Платформа анализа данных</span>
+                </div>
+                
+                <div class="case-tags">
+                    <span class="case-tag ai">AI Platform</span>
+                    <span class="case-tag analytics">Аналитика</span>
+                    <span class="case-tag retail">Retail</span>
+                </div>
+                
+                <h1 class="case-title">Платформа анализа данных для федеральной ритейл-сети</h1>
+                <p class="case-subtitle">Система прогнозной аналитики, которая увеличила операционную эффективность на 34%</p>
+                
+                <div class="case-meta">
+                    <div class="meta-item">
+                        <div class="meta-label">Клиент</div>
+                        <div class="meta-value">Federal Retail Chain (под NDA)</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Срок</div>
+                        <div class="meta-value">6 месяцев</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Команда</div>
+                        <div class="meta-value">8 специалистов</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Технологии</div>
+                        <div class="meta-value">Python, React, AWS, ML</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="case-content">
+        <div class="container">
+            <div class="case-grid">
+                <div class="case-main">
+                    <div class="case-block">
+                        <h2 class="case-block-title">
+                            <span class="title-number">01</span>
+                            <span class="title-text">Задача</span>
+                        </h2>
+                        <div class="case-block-content">
+                            <p>Клиент — федеральная сеть из 200+ магазинов — столкнулся с проблемой неэффективного управления запасами и планирования закупок. Существующая система работала на устаревших технологиях и не позволяла:</p>
+                            <ul class="case-list">
+                                <li>Прогнозировать спрос с учетом сезонности и локальных факторов</li>
+                                <li>Оперативно реагировать на изменения продаж</li>
+                                <li>Анализировать эффективность ассортимента в разрезе регионов</li>
+                                <li>Интегрировать данные из разных источников (CRM, логистика, 1C)</li>
+                            </ul>
+                            <p>Результат: избыточные запасы на 15-20%, потерянные продажи из-за отсутствия товара, высокие логистические издержки.</p>
+                        </div>
+                    </div>
+                    <div class="case-block">
+                        <h2 class="case-block-title">
+                            <span class="title-number">02</span>
+                            <span class="title-text">Решение</span>
+                        </h2>
+                        <div class="case-block-content">
+                            <p>Мы разработали облачную платформу прогнозной аналитики с элементами искусственного интеллекта. Ключевые компоненты:</p>
+                            
+                            <div class="solution-features">
+                                <div class="feature">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h4>ML-движок прогнозирования</h4>
+                                        <p>Алгоритмы машинного обучения для прогноза спроса с точностью 92% на горизонте 30 дней</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-chart-network"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h4>Панель управления в реальном времени</h4>
+                                        <p>Интерактивные дашборды с возможностью детализации до уровня отдельного товара в конкретном магазине</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h4>Автоматизированные рекомендации</h4>
+                                        <p>Система предлагает оптимальные планы закупок и перераспределения товаров между складами</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-plug"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h4>Интеграционный хаб</h4>
+                                        <p>Единая точка интеграции с 12 внутренними и внешними системами клиента</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="case-block">
+                        <h2 class="case-block-title">
+                            <span class="title-number">03</span>
+                            <span class="title-text">Результаты</span>
+                        </h2>
+                        <div class="case-block-content">
+                            <p>Внедрение платформы позволило достичь значимых бизнес-показателей уже через 3 месяца после запуска:</p>
+                            
+                            <div class="results-grid">
+                                <div class="result-card primary">
+                                    <div class="result-value">+34%</div>
+                                    <div class="result-label">Операционная эффективность</div>
+                                    <div class="result-description">За счет оптимизации запасов и логистики</div>
+                                </div>
+                                
+                                <div class="result-card">
+                                    <div class="result-value">-18%</div>
+                                    <div class="result-label">Избыточные запасы</div>
+                                    <div class="result-description">Снижение «замороженных» средств в товаре</div>
+                                </div>
+                                
+                                <div class="result-card">
+                                    <div class="result-value">92%</div>
+                                    <div class="result-label">Точность прогнозов</div>
+                                    <div class="result-description">Позволило сократить потери от дефицита</div>
+                                </div>
+                                
+                                <div class="result-card">
+                                    <div class="result-value">40 ч/мес</div>
+                                    <div class="result-label">Экономия времени аналитиков</div>
+                                    <div class="result-description">Автоматизация рутинных отчетов</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-sidebar">
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Команда проекта</h3>
+                        <div class="team-list">
+                            <div class="team-member">
+                                <div class="member-avatar">ПА</div>
+                                <div class="member-info">
+                                    <div class="member-name">Павел Алексеев</div>
+                                    <div class="member-role">Tech Lead</div>
+                                </div>
+                            </div>
+                            
+                            <div class="team-member">
+                                <div class="member-avatar">МК</div>
+                                <div class="member-info">
+                                    <div class="member-name">Мария Ковалева</div>
+                                    <div class="member-role">Data Scientist</div>
+                                </div>
+                            </div>
+                            
+                            <div class="team-member">
+                                <div class="member-avatar">ДС</div>
+                                <div class="member-info">
+                                    <div class="member-name">Дмитрий Сидоров</div>
+                                    <div class="member-role">Frontend Architect</div>
+                                </div>
+                            </div>
+                            
+                            <div class="team-member">
+                                <div class="member-avatar">АП</div>
+                                <div class="member-info">
+                                    <div class="member-name">Анна Петрова</div>
+                                    <div class="member-role">UX/UI Designer</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-widget cta-widget">
+                        <h3 class="widget-title">Похожий проект?</h3>
+                        <p>Обсудим, как мы можем решить вашу задачу</p>
+                        <button class="cta-button primary full-width" onclick="openModal()">
+                            Обсудить проект
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="next-project">
+    <div class="container">
+        <div class="next-project-content">
+            <h2 class="next-project-title">Следующий кейс</h2>
+            <div class="next-project-card">
+                <div class="next-project-info">
+                    <div class="next-project-badge">FinTech</div>
+                    <h3 class="next-project-name">Мобильный банк для нового поколения</h3>
+                    <p class="next-project-description">Разработка и запуск FinTech-продукта с нуля за 9 месяцев</p>
+                    <a href="#" class="text-link">
+                        Изучить кейс
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="next-project-visual">
+                    <img src="/images/Mask group (3).png" 
+                         alt="Мобильное банковское приложение">
+                    <div class="next-project-overlay"></div>
+                    <div class="next-project-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <footer class="footer" id="about">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">Q</div>
+                        <div class="logo-text">Qscape</div>
+                    </a>
+                    <p class="footer-tagline">Архитекторы цифровых ландшафтов</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-column-title">Компания</h4>
+                        <a href="#about">О нас</a>
+                        <a href="#process">Процесс</a>
+                        <a href="#team">Команда</a>
+                        <a href="#careers">Карьера</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-column-title">Услуги</h4>
+                        <a href="#services">Веб-разработка</a>
+                        <a href="#services">Дизайн</a>
+                        <a href="#services">Продвижение</a>
+                        <a href="#services">Битрикс24</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-column-title">Контакты</h4>
+                        <a href="mailto:hello@qscape.ru">info@qscape.ru</a>
+                        <a href="tel:+78001234567">+7 (920) 067-84-67</a>
+                        <a href="#">603155, Нижегородская область, г. Нижний Новгород, ул. Ковалихинская, д. 72Б</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 Qscape. Все права защищены.</p>
+                <div class="footer-legal">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Условия использования</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/banners.js"></script>
+</body>
+</html>
